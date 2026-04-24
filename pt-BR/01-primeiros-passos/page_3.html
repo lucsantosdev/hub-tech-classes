@@ -243,7 +243,47 @@ body {
     .image-display-container {
         height: 180px;
     }
+    .slide-nav {
+        margin: 0 16px 20px 16px;
+        padding-top: 12px;
+    }
 }
+/* Navigation */
+.slide-nav {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 8px 45px 28px 45px;
+    padding-top: 16px;
+    border-top: 1px solid #E5E7EB;
+}
+.nav-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 22px;
+    border-radius: 8px;
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    border: 2px solid transparent;
+    transition: background-color 0.2s, transform 0.1s;
+    cursor: pointer;
+}
+.nav-btn:active { transform: scale(0.97); }
+.nav-btn-primary {
+    background-color: #6366F1;
+    color: #FFF;
+    border-color: #6366F1;
+}
+.nav-btn-primary:hover { background-color: #4F46E5; border-color: #4F46E5; }
+.nav-btn-ghost {
+    background-color: transparent;
+    color: #6366F1;
+    border-color: #6366F1;
+}
+.nav-btn-ghost:hover { background-color: rgba(99, 102, 241, 0.08); }
 </style>
 </head>
 <body>
@@ -327,6 +367,10 @@ body {
 </div>
 </div>
 </div>
+</div>
+<nav class="slide-nav">
+  <a class="nav-btn nav-btn-ghost" href="page_2.html"><i class="fas fa-arrow-left"></i> Anterior</a>
+</nav>
 </div>
 </body>
 </html>

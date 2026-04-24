@@ -8,6 +8,7 @@
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&amp;family=JetBrains+Mono:wght@800&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
 <script src="https://picture-search.skywork.ai/aippt/static/tailwindcss.com"></script><style>* { box-sizing: border-box; }
 body {
     min-height: 100vh;
@@ -159,6 +160,42 @@ body {
         margin-top: 24px;
     }
 }
+/* Navigation */
+.slide-nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-top: 16px;
+    margin-top: 16px;
+    border-top: 1px solid #E5E7EB;
+}
+.nav-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 22px;
+    border-radius: 8px;
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    border: 2px solid transparent;
+    transition: background-color 0.2s, transform 0.1s;
+    cursor: pointer;
+}
+.nav-btn:active { transform: scale(0.97); }
+.nav-btn-primary {
+    background-color: #6366F1;
+    color: #FFF;
+    border-color: #6366F1;
+}
+.nav-btn-primary:hover { background-color: #4F46E5; border-color: #4F46E5; }
+.nav-btn-ghost {
+    background-color: transparent;
+    color: #6366F1;
+    border-color: #6366F1;
+}
+.nav-btn-ghost:hover { background-color: rgba(99, 102, 241, 0.08); }
 </style>
 </head>
 <body>
@@ -187,6 +224,9 @@ body {
 <div class="cover-metadata-item">Data: 24 de Abril de 2026</div>
 <div class="cover-metadata-item">Foco: Introdução à Tecnologia</div>
 </div>
+<nav class="slide-nav">
+  <a class="nav-btn nav-btn-primary" href="page_2.html">Próxima <i class="fas fa-arrow-right"></i></a>
+</nav>
 </div>
 </div>
 </body>
