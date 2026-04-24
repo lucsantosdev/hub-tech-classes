@@ -10,18 +10,22 @@
 <script src="https://picture-search.skywork.ai/aippt/static/tailwindcss.com"></script><style>* {
     margin: 0;
     padding: 0;
-    box-sizing: border-box
-    }
-body {width: 1280px; height: 720px; overflow: hidden; background-color: #F4F7F6;
+    box-sizing: border-box;
+}
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+    background-color: #F4F7F6;
     font-family: "Inter", sans-serif;
-    color: #1A1A1A}
+    color: #1A1A1A;
+}
 .slide-root-container {
-    width: 1280px;
-    height: 720px;
+    width: 100%;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    padding: 0
-    }
+    padding: 0;
+}
 /* Title Section Styles */
 .title-section-wrapper {
     display: flex;
@@ -32,8 +36,8 @@ body {width: 1280px; height: 720px; overflow: hidden; background-color: #F4F7F6;
     background-color: #FFF;
     border-left: 6px solid #6366F1;
     border-radius: 4px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05)
-    }
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
 .title-label-subtitle {
     font-family: "Inter", sans-serif;
     font-size: 12px;
@@ -41,15 +45,15 @@ body {width: 1280px; height: 720px; overflow: hidden; background-color: #F4F7F6;
     color: #6366F1;
     text-transform: uppercase;
     letter-spacing: 1.5px;
-    margin-bottom: 5px
-    }
+    margin-bottom: 5px;
+}
 .title-main-heading {
     font-family: "JetBrains Mono", monospace;
-    font-size: 32px;
+    font-size: clamp(20px, 3vw, 32px);
     font-weight: 800;
     color: #1A1A1A;
-    margin: 0
-    }
+    margin: 0;
+}
 /* Layout Structure */
 .main-content-wrapper {
     display: flex;
@@ -57,45 +61,45 @@ body {width: 1280px; height: 720px; overflow: hidden; background-color: #F4F7F6;
     align-items: stretch;
     gap: 30px;
     padding: 0 40px 40px 40px;
-    flex-grow: 0
-    }
+    flex: 1;
+}
 .left-column-layout {
     flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: center
-    }
+    justify-content: center;
+}
 .right-column-layout {
     flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 20px
-    }
+    gap: 20px;
+}
 /* Card Styles */
 .info-card-block {
     background-color: #FFF;
     border-radius: 12px;
     padding: 30px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
-    border: 1px solid rgba(99, 102, 241, 0.1)
-    }
+    border: 1px solid rgba(99, 102, 241, 0.1);
+}
 .hardware-card-accent {
-    border-top: 5px solid #6366F1
-    }
+    border-top: 5px solid #6366F1;
+}
 .software-card-accent {
-    border-top: 5px solid #10B981
-    }
+    border-top: 5px solid #10B981;
+}
 .os-card-accent {
-    border-top: 5px solid #F59E0B
-    }
+    border-top: 5px solid #F59E0B;
+}
 /* Typography inside cards */
 .card-header-container {
     display: flex;
     align-items: center;
     gap: 15px;
-    margin-bottom: 15px
-    }
+    margin-bottom: 15px;
+}
 .card-icon-frame {
     font-size: 28px;
     color: #6366F1;
@@ -105,56 +109,57 @@ body {width: 1280px; height: 720px; overflow: hidden; background-color: #F4F7F6;
     align-items: center;
     justify-content: center;
     background-color: rgba(99, 102, 241, 0.1);
-    border-radius: 10px
-    }
+    border-radius: 10px;
+    flex-shrink: 0;
+}
 .software-icon-frame {
     color: #10B981;
-    background-color: rgba(16, 185, 129, 0.1)
-    }
+    background-color: rgba(16, 185, 129, 0.1);
+}
 .card-title-text {
     font-family: "JetBrains Mono", monospace;
-    font-size: 24px;
+    font-size: clamp(18px, 2vw, 24px);
     font-weight: 800;
-    color: #1A1A1A
-    }
+    color: #1A1A1A;
+}
 .card-description-paragraph {
     font-size: 16px;
     line-height: 1.6;
     color: #4B5563;
-    margin-bottom: 20px
-    }
+    margin-bottom: 20px;
+}
 .highlight-bold-text {
     font-weight: 700;
-    color: #1A1A1A
-    }
+    color: #1A1A1A;
+}
 /* List Styles */
 .data-list-container {
     list-style: none;
     display: flex;
     flex-direction: column;
-    gap: 12px
-    }
+    gap: 12px;
+}
 .list-item-entry {
     display: flex;
     align-items: center;
     gap: 12px;
     font-size: 15px;
-    color: #374151
-    }
+    color: #374151;
+}
 .list-bullet-icon {
     font-size: 10px;
-    color: #6366F1
-    }
+    color: #6366F1;
+}
 .software-bullet-icon {
-    color: #10B981
-    }
+    color: #10B981;
+}
 /* OS Specific Grid */
 .os-examples-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
-    margin-top: 15px
-    }
+    margin-top: 15px;
+}
 .os-tag-item {
     background-color: #F3F4F6;
     padding: 8px;
@@ -163,33 +168,69 @@ body {width: 1280px; height: 720px; overflow: hidden; background-color: #F4F7F6;
     font-weight: 700;
     text-align: center;
     color: #4B5563;
-    border: 1px solid #E5E7EB
-    }
+    border: 1px solid #E5E7EB;
+}
 /* Interaction Note */
 .interaction-footer-note {
-    margin: 20px 45px 0 45px;
+    margin: 20px 45px 24px 45px;
     padding: 15px 25px;
     background-color: rgba(99, 102, 241, 0.05);
     border-radius: 10px;
     border: 1px dashed #6366F1;
     display: flex;
     align-items: center;
-    gap: 15px
-    }
+    gap: 15px;
+}
 .interaction-note-text {
     font-size: 14px;
     color: #4B5563;
-    font-style: italic
-    }
+    font-style: italic;
+}
 .interaction-note-icon {
     color: #6366F1;
-    font-size: 18px
+    font-size: 18px;
+    flex-shrink: 0;
+}
+
+@media (max-width: 1024px) {
+    .title-section-wrapper {
+        margin: 16px 24px;
+        padding: 20px 30px;
     }
-html { overflow: hidden; }
+    .main-content-wrapper {
+        padding: 0 24px 24px 24px;
+        gap: 20px;
+    }
+    .interaction-footer-note {
+        margin: 16px 28px 24px 28px;
+    }
+}
+
+@media (max-width: 767px) {
+    .title-section-wrapper {
+        margin: 16px;
+        padding: 16px 20px;
+    }
+    .main-content-wrapper {
+        flex-direction: column;
+        padding: 0 16px 16px 16px;
+        gap: 16px;
+    }
+    .right-column-layout {
+        gap: 16px;
+    }
+    .info-card-block {
+        padding: 20px;
+    }
+    .interaction-footer-note {
+        margin: 0 16px 20px 16px;
+        padding: 12px 16px;
+    }
+}
 </style>
 </head>
 <body>
-<div class="slide-root-container" style="overflow: hidden;">
+<div class="slide-root-container">
 <!-- Title Section -->
 <div class="title-section-wrapper">
 <span class="title-label-subtitle">Aula 01: Fundamentos</span>

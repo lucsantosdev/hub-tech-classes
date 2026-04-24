@@ -9,23 +9,27 @@
 <script src="https://picture-search.skywork.ai/aippt/static/tailwindcss.com"></script><style>@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=JetBrains+Mono:wght@800&display=swap");
 * {
     box-sizing: border-box;
-    margin: 0 0;
-    padding: 0 0
-    }
-body {width: 1280px; height: 720px; overflow: hidden; background-color: #E2E8F0;
+    margin: 0;
+    padding: 0;
+}
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+    background-color: #E2E8F0;
     display: flex;
     justify-content: center;
-    align-items: center}
+    align-items: flex-start;
+}
 .slide-root-container {
-    width: 1280px;
-    height: 720px;
+    width: 100%;
+    min-height: 100vh;
     background-color: #F4F7F6;
     display: flex;
     flex-direction: column;
     position: relative;
     font-family: "Inter", sans-serif;
-    color: #1A1A1A
-    }
+    color: #1A1A1A;
+}
 .title-section-wrapper {
     display: flex;
     flex-direction: column;
@@ -35,8 +39,8 @@ body {width: 1280px; height: 720px; overflow: hidden; background-color: #E2E8F0;
     background-color: #FFF;
     border-left: 6px solid #6366F1;
     border-radius: 4px;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05)
-    }
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
 .title-label-text {
     font-family: "Inter", sans-serif;
     font-size: 12px;
@@ -44,68 +48,68 @@ body {width: 1280px; height: 720px; overflow: hidden; background-color: #E2E8F0;
     color: #6366F1;
     text-transform: uppercase;
     letter-spacing: 1.5px;
-    margin-bottom: 3px
-    }
+    margin-bottom: 3px;
+}
 .title-main-heading {
     font-family: "JetBrains Mono", monospace;
-    font-size: 32px;
+    font-size: clamp(20px, 3vw, 32px);
     font-weight: 800;
     color: #1A1A1A;
-    margin: 0 0
-    }
+    margin: 0;
+}
 .main-content-layout {
     display: flex;
     flex: 1;
     padding: 13px 45px 26px 45px;
     gap: 19px 30px;
-    align-items: stretch
-    }
+    align-items: stretch;
+}
 .left-content-column {
     display: flex;
     flex-direction: column;
     flex: 1;
     justify-content: center;
-    gap: 16px 20px
-    }
+    gap: 16px;
+}
 .right-content-column {
     display: flex;
     flex-direction: column;
     flex: 1;
     justify-content: center;
-    gap: 13px 20px
-    }
+    gap: 13px;
+}
 .info-card-block {
     background-color: #FFF;
     padding: 20px 25px;
     border-radius: 12px;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-    flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: center
-    }
+    justify-content: center;
+}
 .card-heading-group {
     display: flex;
     align-items: center;
     gap: 10px 12px;
-    margin-bottom: 12px
-    }
+    margin-bottom: 12px;
+}
 .card-icon-accent {
     color: #6366F1;
-    font-size: 23px
-    }
+    font-size: 23px;
+    flex-shrink: 0;
+}
 .card-title-text {
     font-family: "JetBrains Mono", monospace;
-    font-size: 20px;
+    font-size: clamp(16px, 1.8vw, 20px);
     font-weight: 800;
-    color: #1A1A1A
-    }
+    color: #1A1A1A;
+}
 .definition-paragraph-text {
     font-size: 15px;
     line-height: 1.6;
     color: #4B5563;
-    margin-bottom: 16px
-    }
+    margin-bottom: 16px;
+}
 .quote-box-element {
     background-color: #EEF2FF;
     border-radius: 8px;
@@ -114,14 +118,14 @@ body {width: 1280px; height: 720px; overflow: hidden; background-color: #E2E8F0;
     font-family: "JetBrains Mono", monospace;
     font-size: 14px;
     color: #4338CA;
-    line-height: 1.5
-    }
+    line-height: 1.5;
+}
 .creation-grid-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 10px 12px;
-    list-style: none
-    }
+    list-style: none;
+}
 .creation-item-box {
     display: flex;
     align-items: center;
@@ -131,14 +135,14 @@ body {width: 1280px; height: 720px; overflow: hidden; background-color: #E2E8F0;
     border-radius: 6px;
     font-size: 13px;
     font-weight: 500;
-    color: #374151
-    }
+    color: #374151;
+}
 .career-grid-wrapper {
     display: grid;
     grid-template-columns: 1fr;
     gap: 6px 10px;
-    list-style: none
-    }
+    list-style: none;
+}
 .career-badge-item {
     display: flex;
     justify-content: space-between;
@@ -147,20 +151,21 @@ body {width: 1280px; height: 720px; overflow: hidden; background-color: #E2E8F0;
     background-color: #F8FAFC;
     border: 1px solid #E2E8F0;
     border-radius: 8px;
-    font-size: 13px
-    }
+    font-size: 13px;
+}
 .career-name-text {
     font-weight: 600;
-    color: #1A1A1A
-    }
+    color: #1A1A1A;
+}
 .career-tag-label {
     font-size: 10px;
     background-color: #E0E7FF;
     color: #4338CA;
     padding: 2px 8px;
     border-radius: 20px;
-    font-weight: 700
-    }
+    font-weight: 700;
+    white-space: nowrap;
+}
 .motivation-highlight-banner {
     margin-top: 10px;
     padding: 6px 10px;
@@ -173,19 +178,19 @@ body {width: 1280px; height: 720px; overflow: hidden; background-color: #E2E8F0;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 5px 8px
-    }
+    gap: 5px 8px;
+}
 .image-display-container {
     height: 205px;
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1)
-    }
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
 .programmer-classroom-image {
     width: 100%;
     height: 100%;
-    object-fit: cover
-    }
+    object-fit: cover;
+}
 .interactive-question-footer {
     background-color: #6366F1;
     padding: 10px 25px;
@@ -195,8 +200,8 @@ body {width: 1280px; height: 720px; overflow: hidden; background-color: #E2E8F0;
     font-weight: 500;
     display: flex;
     align-items: center;
-    gap: 10px 15px
-    }
+    gap: 10px 15px;
+}
 .question-icon-circle {
     background-color: rgba(255, 255, 255, 0.2);
     width: 30px;
@@ -204,13 +209,45 @@ body {width: 1280px; height: 720px; overflow: hidden; background-color: #E2E8F0;
     border-radius: 50%;
     display: flex;
     align-items: center;
-    justify-content: center
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+@media (max-width: 1024px) {
+    .title-section-wrapper {
+        margin: 13px 24px 0 24px;
+        padding: 14px 30px;
     }
-html { overflow: hidden; }
+    .main-content-layout {
+        padding: 13px 24px 24px 24px;
+    }
+}
+
+@media (max-width: 767px) {
+    .title-section-wrapper {
+        margin: 12px 16px 0 16px;
+        padding: 12px 16px;
+    }
+    .main-content-layout {
+        flex-direction: column;
+        padding: 12px 16px 20px 16px;
+        gap: 16px;
+    }
+    .left-content-column,
+    .right-content-column {
+        gap: 12px;
+    }
+    .info-card-block {
+        padding: 16px 18px;
+    }
+    .image-display-container {
+        height: 180px;
+    }
+}
 </style>
 </head>
 <body>
-<div class="slide-root-container" style="overflow: hidden;">
+<div class="slide-root-container">
 <!-- Header Title Section -->
 <div class="title-section-wrapper">
 <span class="title-label-text">Aula 01: Fundamentos</span>
