@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+
+<html lang="pt">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Aula 01 – Breve História da Linguagem Python</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&amp;family=JetBrains+Mono:wght@800&amp;display=swap" rel="stylesheet"/>
+<script src="https://picture-search.skywork.ai/aippt/static/tailwindcss.com"></script><style>* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+    background-color: #F4F7F6;
+    font-family: "Inter", sans-serif;
+    color: #1A1A1A;
+}
+.slide-root-container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+/* Title Section Styles */
+.title-section-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 25px 45px;
+    margin: 20px 40px;
+    background-color: #FFF;
+    border-left: 6px solid #6366F1;
+    border-radius: 4px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+.title-label-subtitle {
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    color: #6366F1;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 5px;
+}
+.title-main-heading {
+    font-family: "JetBrains Mono", monospace;
+    font-size: clamp(20px, 3vw, 32px);
+    font-weight: 800;
+    color: #1A1A1A;
+    margin: 0;
+}
+/* Layout Structure */
+.main-content-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    gap: 30px;
+    padding: 0 40px 40px 40px;
+    flex: 1;
+}
+.left-column-layout {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.right-column-layout {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+/* Card Styles */
+.info-card-block {
+    background-color: #FFF;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+    border: 1px solid rgba(99, 102, 241, 0.1);
+}
+.hardware-card-accent {
+    border-top: 5px solid #6366F1;
+}
+.software-card-accent {
+    border-top: 5px solid #10B981;
+}
+.os-card-accent {
+    border-top: 5px solid #F59E0B;
+}
+/* Typography inside cards */
+.card-header-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+.card-icon-frame {
+    font-size: 28px;
+    color: #6366F1;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(99, 102, 241, 0.1);
+    border-radius: 10px;
+    flex-shrink: 0;
+}
+.software-icon-frame {
+    color: #10B981;
+    background-color: rgba(16, 185, 129, 0.1);
+}
+.card-title-text {
+    font-family: "JetBrains Mono", monospace;
+    font-size: clamp(18px, 2vw, 24px);
+    font-weight: 800;
+    color: #1A1A1A;
+}
+.card-description-paragraph {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #4B5563;
+    margin-bottom: 20px;
+}
+.highlight-bold-text {
+    font-weight: 700;
+    color: #1A1A1A;
+}
+/* List Styles */
+.data-list-container {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.list-item-entry {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 15px;
+    color: #374151;
+}
+.list-bullet-icon {
+    font-size: 10px;
+    color: #6366F1;
+}
+.software-bullet-icon {
+    color: #10B981;
+}
+/* OS Specific Grid */
+.os-examples-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 15px;
+}
+.os-tag-item {
+    background-color: #F3F4F6;
+    padding: 8px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 700;
+    text-align: center;
+    color: #4B5563;
+    border: 1px solid #E5E7EB;
+}
+/* Interaction Note */
+.interaction-footer-note {
+    margin: 20px 45px 24px 45px;
+    padding: 15px 25px;
+    background-color: rgba(99, 102, 241, 0.05);
+    border-radius: 10px;
+    border: 1px dashed #6366F1;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.interaction-note-text {
+    font-size: 14px;
+    color: #4B5563;
+    font-style: italic;
+}
+.interaction-note-icon {
+    color: #6366F1;
+    font-size: 18px;
+    flex-shrink: 0;
+}
+
+@media (max-width: 1024px) {
+    .title-section-wrapper {
+        margin: 16px 24px;
+        padding: 20px 30px;
+    }
+    .main-content-wrapper {
+        padding: 0 24px 24px 24px;
+        gap: 20px;
+    }
+    .interaction-footer-note {
+        margin: 16px 28px 24px 28px;
+    }
+}
+
+@media (max-width: 767px) {
+    .title-section-wrapper {
+        margin: 16px;
+        padding: 16px 20px;
+    }
+    .main-content-wrapper {
+        flex-direction: column;
+        padding: 0 16px 16px 16px;
+        gap: 16px;
+    }
+    .right-column-layout {
+        gap: 16px;
+    }
+    .info-card-block {
+        padding: 20px;
+    }
+    .interaction-footer-note {
+        margin: 0 16px 20px 16px;
+        padding: 12px 16px;
+    }
+    .slide-nav {
+        margin: 0 16px 20px 16px;
+        padding-top: 12px;
+    }
+}
+/* Navigation */
+.slide-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 8px 45px 28px 45px;
+    padding-top: 16px;
+    border-top: 1px solid #E5E7EB;
+}
+.nav-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 22px;
+    border-radius: 8px;
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    border: 2px solid transparent;
+    transition: background-color 0.2s, transform 0.1s;
+    cursor: pointer;
+}
+.nav-btn:active { transform: scale(0.97); }
+.nav-btn-primary {
+    background-color: #6366F1;
+    color: #FFF;
+    border-color: #6366F1;
+}
+.nav-btn-primary:hover { background-color: #4F46E5; border-color: #4F46E5; }
+.nav-btn-ghost {
+    background-color: transparent;
+    color: #6366F1;
+    border-color: #6366F1;
+}
+.nav-btn-ghost:hover { background-color: rgba(99, 102, 241, 0.08); }
+</style>
+</head>
+<body>
+<div class="slide-root-container">
+<!-- Title Section -->
+<div class="title-section-wrapper">
+<span class="title-label-subtitle">Aula 01: Python</span>
+<h2 class="title-main-heading">Breve História da Linguagem Python</h2>
+</div>
+<!-- Content Layout -->
+<div class="main-content-wrapper">
+<!-- Left Column: History -->
+<div class="left-column-layout">
+<div class="info-card-block hardware-card-accent">
+<div class="card-header-container">
+<div class="card-icon-frame">
+<i class="fas fa-terminal"></i>
+</div>
+<h3 class="card-title-text">Como Surgiu a Linguagem Python</h3>
+</div>
+<p class="card-description-paragraph">
+    Criada por Guido van Rossum em 1991, Python é uma linguagem de programação <span class="highlight-bold-text">de alto nível e interpretada</span>. Ela é caracterizada por ser:
+</p>
+<ul class="data-list-container">
+<li class="list-item-entry">
+<i class="fas fa-circle list-bullet-icon"></i>
+<span><span class="highlight-bold-text">Fácil de Aprender:</span> Sintaxe simples e clara, ideal para iniciantes.</span>
+</li>
+<li class="list-item-entry">
+<i class="fas fa-circle list-bullet-icon"></i>
+<span><span class="highlight-bold-text">Produtividade:</span> Prioriza a produtividade do programador e a facilidade de leitura do código sobre o esforço computacional.</span>
+</li>
+<li class="list-item-entry">
+<i class="fas fa-circle list-bullet-icon"></i>
+<span><span class="highlight-bold-text">Comunidade Ativa:</span> Grande comunidade de desenvolvedores, fóruns e recursos online.</span>
+</li>
+</ul>
+</div>
+</div>
+<!-- Right Column: Software & OS -->
+<div class="right-column-layout">
+<!-- Software Block -->
+<div class="info-card-block software-card-accent">
+<div class="card-header-container">
+<div class="card-icon-frame software-icon-frame">
+<i class="fas fa-laptop-code"></i>
+</div>
+<h3 class="card-title-text">Principais Usos da Linguagem Python</h3>
+</div>
+<p class="card-description-paragraph" style="margin-bottom: 0;">
+                        Trata-se de uma linguagem de programação <span class="highlight-bold-text">versátil, multi-paradigma e de propósito geral</span>, ou seja, projetada para criar softwares em diversos domínios de aplicação, sem limitação a um nicho específico.
+                    </p>
+                    <div class="os-examples-grid">
+                    <div class="os-tag-item">Desenvolvimento Web</div>
+                    <div class="os-tag-item">Análise de Dados</div>
+                    <div class="os-tag-item">Automação & IA</div>
+                    <div class="os-tag-item">Desenvolvimento de Jogos</div>
+                    <div class="os-tag-item">Computação Científica</div>
+                    <div class="os-tag-item">Gerenciamento de Database</div>
+                    </div>
+</div>
+<!-- OS Block -->
+<div class="info-card-block os-card-accent">
+<div class="card-header-container">
+<div class="card-icon-frame" style="color: #F59E0B; background-color: rgba(245, 158, 11, 0.1);">
+<i class="fas fa-desktop"></i>
+</div>
+<h3 class="card-title-text">Instalação | IDE Online</h3>
+</div>
+<ul class="data-list-container">
+<li class="list-item-entry">
+<i class="fas fa-check-circle" style="color: #F59E0B;"></i>
+<span><a href="https://www.python.org/" target="_blank">Site e Documentação Oficial.</a></span>
+</li>
+<li class="list-item-entry">
+<i class="fas fa-check-circle" style="color: #F59E0B;"></i>
+<span><a href="https://www.onlineide.pro/playground/python" target="_blank">Online IDE Pro.</a></span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- Interaction Note -->
+<div class="interaction-footer-note">
+<i class="fas fa-lightbulb interaction-note-icon"></i>
+<p class="interaction-note-text">
+<span class="highlight-bold-text">Desafio Rápido:</span> Escreve seu primeiro código em Python. Digite <code>print("Olá, Mundo!")</code> no seu ambiente de desenvolvimento.</p>
+</div>
+<nav class="slide-nav">
+  <a class="nav-btn nav-btn-ghost" href="page_1.html"><i class="fas fa-arrow-left"></i> Anterior</a>
+  <a class="nav-btn nav-btn-primary" href="page_3.html">Próxima <i class="fas fa-arrow-right"></i></a>
+</nav>
+</div>
+</body>
+</html>

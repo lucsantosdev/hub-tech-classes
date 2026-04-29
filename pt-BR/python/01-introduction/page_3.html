@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+
+<html lang="pt">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Aula 01 – Variáveis e Sintaxe Básica</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
+<script src="https://picture-search.skywork.ai/aippt/static/tailwindcss.com"></script><style>@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=JetBrains+Mono:wght@800&display=swap");
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+    background-color: #E2E8F0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+.slide-root-container {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #F4F7F6;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    font-family: "Inter", sans-serif;
+    color: #1A1A1A;
+}
+.title-section-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px 45px;
+    margin: 13px 45px 0 45px;
+    background-color: #FFF;
+    border-left: 6px solid #6366F1;
+    border-radius: 4px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+.title-label-text {
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    color: #6366F1;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 3px;
+}
+.title-main-heading {
+    font-family: "JetBrains Mono", monospace;
+    font-size: clamp(20px, 3vw, 32px);
+    font-weight: 800;
+    color: #1A1A1A;
+    margin: 0;
+}
+.main-content-layout {
+    display: flex;
+    flex: 1;
+    padding: 13px 45px 26px 45px;
+    gap: 19px 30px;
+    align-items: stretch;
+}
+.left-content-column {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: center;
+    gap: 16px;
+}
+.right-content-column {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: center;
+    gap: 13px;
+}
+.info-card-block {
+    background-color: #FFF;
+    padding: 20px 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.card-heading-group {
+    display: flex;
+    align-items: center;
+    gap: 10px 12px;
+    margin-bottom: 12px;
+}
+.card-icon-accent {
+    color: #6366F1;
+    font-size: 23px;
+    flex-shrink: 0;
+}
+.card-title-text {
+    font-family: "JetBrains Mono", monospace;
+    font-size: clamp(16px, 1.8vw, 20px);
+    font-weight: 800;
+    color: #1A1A1A;
+}
+.definition-paragraph-text {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #4B5563;
+    margin-bottom: 16px;
+}
+.quote-box-element {
+    background-color: #EEF2FF;
+    border-radius: 8px;
+    padding: 12px 15px;
+    border-left: 4px solid #6366F1;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 14px;
+    color: #4338CA;
+    line-height: 1.5;
+}
+.io-grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 12px;
+}
+.io-item-box {
+    background-color: #F8FAFC;
+    border: 1px solid #E2E8F0;
+    border-radius: 10px;
+    padding: 12px 14px;
+}
+.io-item-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #4338CA;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+}
+.io-item-text {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #374151;
+}
+.variable-example-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px 10px;
+    list-style: none;
+    margin-top: 12px;
+}
+.variable-example-item {
+    background-color: #F8FAFC;
+    border: 1px solid #E2E8F0;
+    border-radius: 8px;
+    padding: 10px 12px;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 12px;
+    color: #374151;
+}
+.creation-grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 12px;
+    list-style: none;
+}
+.creation-item-box {
+    display: flex;
+    align-items: center;
+    gap: 8px 10px;
+    background-color: #F9FAFB;
+    padding: 8px 15px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #374151;
+}
+.career-grid-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 6px 10px;
+    list-style: none;
+}
+.career-badge-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 15px;
+    background-color: #F8FAFC;
+    border: 1px solid #E2E8F0;
+    border-radius: 8px;
+    font-size: 13px;
+}
+.career-name-text {
+    font-weight: 600;
+    color: #1A1A1A;
+}
+.career-tag-label {
+    font-size: 10px;
+    background-color: #E0E7FF;
+    color: #4338CA;
+    padding: 2px 8px;
+    border-radius: 20px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+.types-grid-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 12px;
+    list-style: none;
+}
+.type-card-item {
+    background: linear-gradient(135deg, #F8FAFC 0%, #EEF2FF 100%);
+    border: 1px solid #DDE5F5;
+    border-radius: 10px;
+    padding: 12px 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.type-name-text {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 14px;
+    font-weight: 800;
+    color: #1F2937;
+}
+.type-example-text {
+    font-size: 12px;
+    color: #4B5563;
+    line-height: 1.5;
+}
+.motivation-highlight-banner {
+    margin-top: 10px;
+    padding: 6px 10px;
+    background-color: #ECFDF5;
+    color: #059669;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 13px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px 8px;
+}
+.code-example-card {
+    background: linear-gradient(180deg, #111827 0%, #1F2937 100%);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.15);
+}
+.code-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 16px;
+    background-color: rgba(255, 255, 255, 0.06);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+.code-card-title {
+    font-size: 12px;
+    font-weight: 700;
+    color: #E5E7EB;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+}
+.code-dots {
+    display: flex;
+    gap: 6px;
+}
+.code-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+.code-dot-red { background-color: #F87171; }
+.code-dot-yellow { background-color: #FBBF24; }
+.code-dot-green { background-color: #34D399; }
+.code-block-element {
+    margin: 0;
+    padding: 18px 16px;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 13px;
+    line-height: 1.7;
+    color: #E5E7EB;
+    white-space: pre-wrap;
+}
+.code-keyword { color: #C4B5FD; }
+.code-function { color: #60A5FA; }
+.code-string { color: #86EFAC; }
+.code-number { color: #F9A8D4; }
+.code-note-banner {
+    margin-top: 10px;
+    padding: 10px 12px;
+    background-color: #EFF6FF;
+    color: #1D4ED8;
+    border-radius: 8px;
+    font-size: 13px;
+    line-height: 1.5;
+}
+.interactive-question-footer {
+    background-color: #6366F1;
+    padding: 10px 25px;
+    border-radius: 8px;
+    color: #FFF;
+    font-size: 14px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 10px 15px;
+}
+.question-icon-circle {
+    background-color: rgba(255, 255, 255, 0.2);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+@media (max-width: 1024px) {
+    .title-section-wrapper {
+        margin: 13px 24px 0 24px;
+        padding: 14px 30px;
+    }
+    .main-content-layout {
+        padding: 13px 24px 24px 24px;
+    }
+}
+
+@media (max-width: 767px) {
+    .title-section-wrapper {
+        margin: 12px 16px 0 16px;
+        padding: 12px 16px;
+    }
+    .main-content-layout {
+        flex-direction: column;
+        padding: 12px 16px 20px 16px;
+        gap: 16px;
+    }
+    .left-content-column,
+    .right-content-column {
+        gap: 12px;
+    }
+    .info-card-block {
+        padding: 16px 18px;
+    }
+    .io-grid-container,
+    .variable-example-list,
+    .types-grid-wrapper {
+        grid-template-columns: 1fr;
+    }
+    .slide-nav {
+        margin: 0 16px 20px 16px;
+        padding-top: 12px;
+    }
+}
+/* Navigation */
+.slide-nav {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 8px 45px 28px 45px;
+    padding-top: 16px;
+    border-top: 1px solid #E5E7EB;
+}
+.nav-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 22px;
+    border-radius: 8px;
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    border: 2px solid transparent;
+    transition: background-color 0.2s, transform 0.1s;
+    cursor: pointer;
+}
+.nav-btn:active { transform: scale(0.97); }
+.nav-btn-primary {
+    background-color: #6366F1;
+    color: #FFF;
+    border-color: #6366F1;
+}
+.nav-btn-primary:hover { background-color: #4F46E5; border-color: #4F46E5; }
+.nav-btn-ghost {
+    background-color: transparent;
+    color: #6366F1;
+    border-color: #6366F1;
+}
+.nav-btn-ghost:hover { background-color: rgba(99, 102, 241, 0.08); }
+</style>
+</head>
+<body>
+<div class="slide-root-container">
+<!-- Header Title Section -->
+<div class="title-section-wrapper">
+<span class="title-label-text">Aula 01: Python</span>
+<h2 class="title-main-heading">Variáveis e Tipos de Dados</h2>
+</div>
+<!-- Main Content Grid -->
+<div class="main-content-layout">
+<!-- Left Column -->
+<div class="left-content-column">
+<!-- Definition Card -->
+<div class="info-card-block">
+<div class="card-heading-group">
+<i class="fas fa-box-archive card-icon-accent"></i>
+<h3 class="card-title-text">O que são variáveis?</h3>
+</div>
+<p class="definition-paragraph-text">
+                        Variáveis são espaços na memória usados para guardar informações que o programa vai reutilizar depois, como nome, idade ou resultado de uma conta.
+          </p>
+<ul class="variable-example-list">
+<li class="variable-example-item">name = "Lucas"</li>
+<li class="variable-example-item">age = 18</li>
+<li class="variable-example-item">height = 1.75</li>
+<li class="variable-example-item">is_student = True</li>
+</ul>
+</div>
+<div class="info-card-block">
+<div class="card-heading-group">
+<i class="fas fa-right-left card-icon-accent"></i>
+<h3 class="card-title-text">Entrada e Saída de Dados</h3>
+</div>
+<p class="definition-paragraph-text">
+                        Todo programa conversa com o usuário. Em Python, usamos <strong>input()</strong> para receber dados e <strong>print()</strong> para mostrar informações na tela.
+          </p>
+<div class="io-grid-container">
+<div class="io-item-box">
+<span class="io-item-label"><i class="fas fa-keyboard"></i> Entrada</span>
+<p class="io-item-text">Use <strong>input()</strong> para fazer uma pergunta e guardar a resposta digitada.</p>
+</div>
+<div class="io-item-box">
+<span class="io-item-label"><i class="fas fa-display"></i> Saída</span>
+<p class="io-item-text">Use <strong>print()</strong> para exibir mensagens, resultados e feedback do programa.</p>
+</div>
+</div>
+</div>
+<!-- Creations Card -->
+<div class="info-card-block">
+<div class="card-heading-group">
+<i class="fas fa-circle-info card-icon-accent"></i>
+<h3 class="card-title-text">Dica Importante</h3>
+</div>
+<div class="quote-box-element">
+<i class="fas fa-terminal" style="margin-right: 8px;"></i>
+                        O valor vindo de <strong>input()</strong> chega como texto. Quando precisar fazer contas, converta para <strong>int()</strong> ou <strong>float()</strong>.
+                    </div>
+</div>
+</div>
+<!-- Right Column -->
+<div class="right-content-column">
+<!-- Careers Card -->
+<div class="info-card-block">
+<div class="card-heading-group">
+<i class="fas fa-database card-icon-accent"></i>
+<h3 class="card-title-text">Tipos de Dados</h3>
+</div>
+<ul class="types-grid-wrapper">
+<li class="type-card-item">
+<span class="type-name-text">int</span>
+<span class="type-example-text">Números inteiros, como 7, 18 e 2026.</span>
+</li>
+<li class="type-card-item">
+<span class="type-name-text">float</span>
+<span class="type-example-text">Números com casas decimais, como 7.5 ou 10.99.</span>
+</li>
+<li class="type-card-item">
+<span class="type-name-text">string</span>
+<span class="type-example-text">Textos entre aspas, como "Lucas" ou "Python".</span>
+</li>
+<li class="type-card-item">
+<span class="type-name-text">boolean</span>
+<span class="type-example-text">Valores lógicos: True ou False.</span>
+</li>
+</ul>
+<div class="motivation-highlight-banner">
+<i class="fas fa-lightbulb"></i>
+                        Escolher o tipo certo ajuda o programa a funcionar como esperado.
+          </div>
+</div>
+<!-- Code Example -->
+<div class="code-example-card">
+<div class="code-card-header">
+<span class="code-card-title">Exemplo em Python</span>
+<div class="code-dots">
+<span class="code-dot code-dot-red"></span>
+<span class="code-dot code-dot-yellow"></span>
+<span class="code-dot code-dot-green"></span>
+</div>
+</div>
+<pre class="code-block-element"><span class="code-keyword">name</span> = <span class="code-function">input</span>(<span class="code-string">"Qual o seu nome? "</span>)
+<span class="code-keyword">age</span> = <span class="code-function">int</span>(<span class="code-function">input</span>(<span class="code-string">"Quantos anos você tem? "</span>))
+<span class="code-function">print</span>(<span class="code-string">"Olá"</span>, name, <span class="code-string">"Você tem"</span>, age, <span class="code-string">"anos de idade!"</span>)</pre>
+</div>
+<div class="code-note-banner">
+<strong>Leitura do fluxo:</strong> o programa pergunta, o usuário responde, Python guarda os valores e depois mostra a mensagem final.
+</div>
+<!-- Interactive Question -->
+<div class="interactive-question-footer">
+<div class="question-icon-circle">
+<i class="fas fa-lightbulb"></i>
+</div>
+<span>Se eu remover o <strong>int()</strong> da idade, o valor continuará sendo número ou vira texto?</span>
+</div>
+</div>
+</div>
+</div>
+<nav class="slide-nav">
+  <a class="nav-btn nav-btn-ghost" href="page_2.html"><i class="fas fa-arrow-left"></i> Anterior</a>
+</nav>
+</div>
+</body>
+</html>
