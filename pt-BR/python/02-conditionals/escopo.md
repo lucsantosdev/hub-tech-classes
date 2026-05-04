@@ -7,9 +7,9 @@
 
 ## 📖 Conteúdo:
 
-- `if`, `elif`, `else`
 - Operadores de Comparação (`>`, `<`, `==`)
 - Operadores Lógicos (`and`, `or`, `not`)
+- Condicionais `if`, `elif`, `else`
 
 ## 💡 Exemplo:
 
