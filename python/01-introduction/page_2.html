@@ -68,6 +68,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    gap: 20px;
 }
 .right-column-layout {
     flex: 1;
@@ -86,6 +87,9 @@ body {
 }
 .hardware-card-accent {
     border-top: 5px solid #6366F1;
+}
+.intro-card-accent {
+    border-top: 5px solid #0EA5E9;
 }
 .software-card-accent {
     border-top: 5px solid #10B981;
@@ -115,6 +119,10 @@ body {
 .software-icon-frame {
     color: #10B981;
     background-color: rgba(16, 185, 129, 0.1);
+}
+.intro-icon-frame {
+    color: #0EA5E9;
+    background-color: rgba(14, 165, 233, 0.1);
 }
 .card-title-text {
     font-family: "JetBrains Mono", monospace;
@@ -280,6 +288,18 @@ body {
 <div class="main-content-wrapper">
 <!-- Left Column: History -->
 <div class="left-column-layout">
+<div class="info-card-block intro-card-accent">
+<div class="card-header-container">
+<div class="card-icon-frame intro-icon-frame">
+<i class="fas fa-code"></i>
+</div>
+<h3 class="card-title-text">O que é Python?🐍</h3>
+</div>
+<p class="card-description-paragraph" style="margin-bottom: 0;">
+    Python é uma linguagem de programação <span class="highlight-bold-text">de alto nível, interpretada e de propósito geral</span>, criada para facilitar a escrita e a leitura de código.
+    É muito usada por iniciantes e profissionais porque combina simplicidade com poder para construir aplicações reais.
+</p>
+</div>
 <div class="info-card-block hardware-card-accent">
 <div class="card-header-container">
 <div class="card-icon-frame">
