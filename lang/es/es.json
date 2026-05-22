@@ -21,5 +21,17 @@
     "aws-cloud-pg1-cover-footer-metadata-2": "Foco: Introducción a los Fundamentos de la Computación en la Nube AWS",
     "aws-cloud-pg1-cover-footer-metadata-3": "Diapositivas + Lecciones Disponibles en ",
     "aws-cloud-pg1-cover-footer-metadata-4": "Por ",
-    "aws-cloud-pg1-nav": "Siguiente "
+    "aws-cloud-pg1-nav": "Siguiente ",
+
+    "database-tag-title": "Base de Datos por @lucsantosdev",
+    "database-pg1-span-title": "Lección: Base de Datos",
+    "database-pg1-h1-title": "Introducción a los Fundamentos Básicos",
+    "database-pg1-p-title": "Base de Datos",
+    "database-pg1-cover-question-label": "Líder en Base de Datos",
+    "database-pg1-cover-question-text": "Una base de datos bien estructurada es como una biblioteca organizada: cada información está en su lugar correcto, lista para ser encontrada.",
+    "database-pg1-cover-footer-metadata-1": "Lecciones de Programación y TI",
+    "database-pg1-cover-footer-metadata-2": "Foco: Introducción a los Fundamentos de Base de Datos",
+    "database-pg1-cover-footer-metadata-3": "Diapositivas + Lecciones Disponibles en ",
+    "database-pg1-cover-footer-metadata-4": "Por ",
+    "database-pg1-nav": "Siguiente  "
 }

@@ -22,5 +22,17 @@
     "aws-cloud-pg1-cover-footer-metadata-2": "Foco: Introdução aos Fundamentos da Computação em Nuvem AWS",
     "aws-cloud-pg1-cover-footer-metadata-3": "Slides + Aulas Disponíveis no ",
     "aws-cloud-pg1-cover-footer-metadata-4": "Por ",
-    "aws-cloud-pg1-nav": "Próximo  "
+    "aws-cloud-pg1-nav": "Próximo  ",
+
+    "database-tag-title": "Banco de Dados por @lucsantosdev",
+    "database-pg1-span-title": "Aula: Banco de Dados",
+    "database-pg1-h1-title": "Introdução aos Fundamentos Básicos",
+    "database-pg1-p-title": "Banco de Dados",
+    "database-pg1-cover-question-label": "Líder em Banco de Dados",
+    "database-pg1-cover-question-text": "Um banco de dados bem estruturado é como uma biblioteca organizada: cada informação está em seu lugar certo, pronta para ser encontrada.",
+    "database-pg1-cover-footer-metadata-1": "Aulas de Programação e TI",
+    "database-pg1-cover-footer-metadata-2": "Foco: Introdução aos Fundamentos de Banco de Dados",
+    "database-pg1-cover-footer-metadata-3": "Slides + Aulas Disponíveis no ",
+    "database-pg1-cover-footer-metadata-4": "Por ",
+    "database-pg1-nav": "Próximo  "
 }
