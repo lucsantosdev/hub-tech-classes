@@ -97,7 +97,15 @@
     "py-fundamentals-pg5-h3-practical-example": "Exemplo Prático",
     "py-fundamentals-pg5-text-tip": "Dica:",
     "py-fundamentals-pg5-text-tip-content": "Comece com aritmética simples, depois use operadores de atribuição para atualizar valores passo a passo. Isso torna seu código mais fácil de ler e depurar.",
-
+    "py-fundamentals-pg9-h2-title": "Tipos de Dados: Tuplas e Conjuntos",
+    "py-fundamentals-pg9-h3-tuples": "Tuplas: Ordenadas e Imutáveis",
+    "py-fundamentals-pg9-text-tuples-1": "Tuplas armazenam múltiplos valores em uma sequência fixa. Elas são úteis quando os dados ",
+    "py-fundamentals-pg9-text-tuples-highlight": "não devem mudar",
+    "py-fundamentals-pg9-text-tuples-2": " após a criação.",
+    "py-fundamentals-pg9-text-tuples-3": "Crie com parênteses: coords = (10, 20)",
+    "py-fundamentals-pg9-text-tuples-4": "Acesse por índice: coords[0] retorna 10",
+    "py-fundamentals-pg9-text-tuples-5": "Bom para constantes, configuração e registros seguros.",
+    "py-fundamentals-pg9-h3-tuples-quick-methods": "Métodos Rápidos para Tuplas",
 
     "aws-cloud-tag-title": "Computação em Nuvem AWS por @lucsantosdev",
     "aws-cloud-pg1-span-title": "Aula: Computação em Nuvem com AWS",
