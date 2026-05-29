@@ -1,13 +1,18 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Variables and Primitive Data Types</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title data-i18n="py-fundamentals-tag-title">Fundamentals of Python Programming by @lucsantosdev</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&amp;family=JetBrains+Mono:wght@800&amp;display=swap" rel="stylesheet" />
+    <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet" />
+    <!-- SkyWork AI | Tailwind CSS -->
     <script src="https://picture-search.skywork.ai/aippt/static/tailwindcss.com"></script>
+    <!-- Custom CSS Styles -->
     <style>
         @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=JetBrains+Mono:wght@800&display=swap");
 
@@ -578,6 +583,7 @@
             text-decoration: none;
         }
     </style>
+    <!-- Language Script -->
     <script src="../lang/script.js"></script>
 </head>
 
@@ -585,8 +591,8 @@
     <div class="slide-root-container">
         <!-- Header Title Section -->
         <div class="title-section-wrapper">
-            <span class="title-label-text">Lesson: Python Fundamentals</span>
-            <h2 class="title-main-heading">Variables and Primitive Data Types</h2>
+            <span class="title-label-text" data-i18n="py-fundamentals-span-title">Lesson: Python Fundamentals</span>
+            <h2 class="title-main-heading" data-i18n="py-fundamentals-pg3-h2-title">Variables and Primitive Data Types</h2>
             <div class="language-switch" aria-label="Language switcher">
                 <button class="language-btn" onclick="setLanguage('en')">English 🇺🇸</button>
                 <button class="language-btn" onclick="setLanguage('pt')">Português 🇧🇷</button>
@@ -601,38 +607,35 @@
                 <div class="info-card-block">
                     <div class="card-heading-group">
                         <i class="fas fa-box-archive card-icon-accent"></i>
-                        <h3 class="card-title-text">What are Variables?</h3>
+                        <h3 class="card-title-text" data-i18n="py-fundamentals-pg3-h3-what-are-variables">What are Variables?</h3>
                     </div>
-                    <p class="definition-paragraph-text">
-                        Variables are memory spaces used to store information that the program will reuse later, such as
-                        name, age, or the result of a calculation.
+                    <p class="definition-paragraph-text" data-i18n="py-fundamentals-pg3-text-what-are-variables">
+                        Variables are memory spaces used to store information that the program will reuse later, such as name, age, or the result of a calculation.
                     </p>
                     <ul class="variable-example-list">
                         <li class="variable-example-item">name = "Lucas"</li>
                         <li class="variable-example-item">age = 18</li>
                         <li class="variable-example-item">height = 1.75</li>
-                        <li class="variable-example-item">is_student = True</li>
+                        <li class="variable-example-item">isStudent = True</li>
                     </ul>
                 </div>
                 <div class="info-card-block">
                     <div class="card-heading-group">
                         <i class="fas fa-right-left card-icon-accent"></i>
-                        <h3 class="card-title-text">Input and Output</h3>
+                        <h3 class="card-title-text" data-i18n="py-fundamentals-pg3-h3-input-output">Input and Output</h3>
                     </div>
-                    <p class="definition-paragraph-text">Every program interacts with the user. In Python, we use
-                        <strong>input()</strong> to receive data and <strong>print()</strong> to display information on
-                        the screen.
+                    <p class="definition-paragraph-text"><span data-i18n="py-fundamentals-pg3-text-input-output-1">Every program interacts with the user. In Python, we use </span>
+                        <strong>input()</strong> <span data-i18n="py-fundamentals-pg3-text-input-output-2"> to receive data and </span> <strong>print()</strong> <span data-i18n="py-fundamentals-pg3-text-input-output-3"> to display information on
+                        the screen.</span>
                     </p>
                     <div class="io-grid-container">
                         <div class="io-item-box">
                             <span class="io-item-label"><i class="fas fa-keyboard"></i> Input</span>
-                            <p class="io-item-text">Use <strong>input()</strong> to ask a question and store the user's
-                                response.</p>
+                            <p class="io-item-text">Use <strong>input()</strong> <span data-i18n="py-fundamentals-pg3-text-input-output-4"> to ask a question and store the user's response.</span></p>
                         </div>
                         <div class="io-item-box">
                             <span class="io-item-label"><i class="fas fa-display"></i> Output</span>
-                            <p class="io-item-text">Use <strong>print()</strong> to display messages, results, and
-                                program feedback.</p>
+                            <p class="io-item-text">Use <strong>print()</strong> <span data-i18n="py-fundamentals-pg3-text-input-output-5"> to display messages, results, and program feedback.</span></p>
                         </div>
                     </div>
                 </div>
@@ -640,12 +643,12 @@
                 <div class="info-card-block">
                     <div class="card-heading-group">
                         <i class="fas fa-circle-info card-icon-accent"></i>
-                        <h3 class="card-title-text">Important Tip</h3>
+                        <h3 class="card-title-text" data-i18n="py-fundamentals-pg3-h3-tip">Important Tip</h3>
                     </div>
                     <div class="quote-box-element">
                         <i class="fas fa-terminal" style="margin-right: 8px;"></i>
-                        The value coming from <strong>input()</strong> arrives as text. When you need to perform
-                        calculations, convert it to <strong>int()</strong> or <strong>float()</strong>.
+                        <span data-i18n="py-fundamentals-pg3-text-tip">The value coming from <strong>input()</strong> arrives as text. When you need to perform
+                        calculations, convert it to <strong>int()</strong> or <strong>float()</strong>.</span>
                     </div>
                 </div>
             </div>
@@ -655,29 +658,29 @@
                 <div class="info-card-block">
                     <div class="card-heading-group">
                         <i class="fas fa-database card-icon-accent"></i>
-                        <h3 class="card-title-text">Primitive Data Types</h3>
+                        <h3 class="card-title-text" data-i18n="py-fundamentals-pg3-h3-primitive-data-types">Primitive Data Types</h3>
                     </div>
                     <ul class="types-grid-wrapper">
                         <li class="type-card-item">
                             <span class="type-name-text">int</span>
-                            <span class="type-example-text">Integer numbers, such as 7, 18, and 2026.</span>
+                            <span class="type-example-text" data-i18n="py-fundamentals-pg3-text-primitive-data-types-int">Integer numbers, such as 7, 18, and 2026.</span>
                         </li>
                         <li class="type-card-item">
                             <span class="type-name-text">float</span>
-                            <span class="type-example-text">Numbers with decimal places, such as 7.5 or 10.99.</span>
+                            <span class="type-example-text" data-i18n="py-fundamentals-pg3-text-primitive-data-types-float">Numbers with decimal places, such as 7.5 or 10.99.</span>
                         </li>
                         <li class="type-card-item">
                             <span class="type-name-text">string</span>
-                            <span class="type-example-text">Text enclosed in quotes, such as "Lucas" or "Python".</span>
+                            <span class="type-example-text" data-i18n="py-fundamentals-pg3-text-primitive-data-types-string">Text enclosed in quotes, such as "Lucas" or "Python".</span>
                         </li>
                         <li class="type-card-item">
                             <span class="type-name-text">boolean</span>
-                            <span class="type-example-text">Logical values: True or False.</span>
+                            <span class="type-example-text" data-i18n="py-fundamentals-pg3-text-primitive-data-types-boolean">Logical values: True or False.</span>
                         </li>
                     </ul>
                     <div class="motivation-highlight-banner">
                         <i class="fas fa-lightbulb"></i>
-                        Choosing the right type helps the program work as expected.
+                        <span data-i18n="py-fundamentals-pg3-text-motivation-highlight">Choosing the right type helps the program work as expected.</span>
                     </div>
                 </div>
                 <!-- Code Example -->
@@ -691,27 +694,26 @@
                         </div>
                     </div>
                     <pre
-                        class="code-block-element"><span class="code-keyword">name</span> = <span class="code-function">input</span>(<span class="code-string">"What is your name? "</span>)
-<span class="code-keyword">age</span> = <span class="code-function">int</span>(<span class="code-function">input</span>(<span class="code-string">"How old are you? "</span>))
-<span class="code-function">print</span>(<span class="code-string">"Hello"</span>, name, <span class="code-string">"You are"</span>, age, <span class="code-string">"years old!"</span>)</pre>
+                        class="code-block-element"><span class="code-keyword">name</span> = <span class="code-function">input</span>(<span class="code-string" data-i18n="py-fundamentals-pg3-code-example-1">"What is your name? "</span>)
+<span class="code-keyword">age</span> = <span class="code-function">int</span>(<span class="code-function">input</span>(<span class="code-string" data-i18n="py-fundamentals-pg3-code-example-2">"How old are you? "</span>))
+<span class="code-function">print</span>(<span class="code-string" data-i18n="py-fundamentals-pg3-code-example-3">"Hello"</span>, name, <span class="code-string" data-i18n="py-fundamentals-pg3-code-example-4">"You are"</span>, age, <span class="code-string" data-i18n="py-fundamentals-pg3-code-example-5">"years old!"</span>)</pre>
                 </div>
                 <div class="code-note-banner">
-                    <strong>Flow reading:</strong> the program asks, the user responds, Python stores the values, and
-                    then shows the final message.
+                    <strong><span data-i18n="py-fundamentals-pg3-flow-reading-1">Flow reading:</span></strong> <span data-i18n="py-fundamentals-pg3-flow-reading-2">the program asks, the user responds, Python stores the values, and
+                    then shows the final message.</span>
                 </div>
                 <!-- Interactive Question -->
                 <div class="interactive-question-footer">
                     <div class="question-icon-circle">
                         <i class="fas fa-lightbulb"></i>
                     </div>
-                    <span>If I remove the <strong>int()</strong> from the age, will the value remain a number or become
-                        text?</span>
+                    <span data-i18n="py-fundamentals-pg3-interactive-question">If I remove the <strong>int()</strong> from the age, will the value remain a number or become text?</span>
                 </div>
             </div>
         </div>
     <nav class="slide-nav">
-        <a class="nav-btn nav-btn-ghost" href="page_2.html"><i class="fas fa-arrow-left"></i> Previous</a>
-        <a class="nav-btn nav-btn-primary" href="page_4.html">Next <i class="fas fa-arrow-right"></i></a>
+        <a class="nav-btn nav-btn-ghost" href="page_2.html"><i class="fas fa-arrow-left"></i><span data-i18n="py-fundamentals-nav-previous"> Previous</span></a>
+        <a class="nav-btn nav-btn-primary" href="page_4.html"><span data-i18n="py-fundamentals-nav-next">Next </span> <i class="fas fa-arrow-right"></i></a>
     </nav>
     <footer class="social-footer">
         <a class="social-link" href="https://www.linkedin.com/in/lucsantosdev" target="_blank" rel="noopener noreferrer"
@@ -733,7 +735,7 @@
             aria-label="Ko-fi support">
             <i class="fas fa-mug-hot"></i>
         </a>
-        <p class="footer-credit">Created by <a href="https://www.linkedin.com/in/lucsantosdev" target="_blank"
+        <p class="footer-credit"><span data-i18n="py-fundamentals-footer-credit">Created by </span><a href="https://www.linkedin.com/in/lucsantosdev" target="_blank"
                 rel="noopener noreferrer">@lucsantosdev</a></p>
     </footer>
     </div>
