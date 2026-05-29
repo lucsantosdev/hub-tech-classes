@@ -1,6 +1,6 @@
 {
     "py-fundamentals-tag-title": "Fundamentos da Programação em Python por @lucsantosdev",
-    "py-fundamentals-pg1-span-title": "Aula: Fundamentos de Python",
+    "py-fundamentals-span-title": "Aula: Fundamentos de Python",
     "py-fundamentals-pg1-h1-title": "Introdução aos Fundamentos Básicos",
     "py-fundamentals-pg1-p-title": "Linguagem de Programação Python",
     "py-fundamentals-pg1-cover-question-label": "Zen do Python",
@@ -9,7 +9,8 @@
     "py-fundamentals-pg1-cover-footer-metadata-2": "Foco: Introdução aos Fundamentos Básicos de Python",
     "py-fundamentals-pg1-cover-footer-metadata-3": "Slides + Aulas Disponíveis no ",
     "py-fundamentals-pg1-cover-footer-metadata-4": "Por ",
-    "py-fundamentals-pg1-nav": "Próximo  ",
+    "py-fundamentals-nav-next": "Próximo  ",
+    "py-fundamentals-nav-previous": " Anterior",
 
 
     "aws-cloud-tag-title": "Computação em Nuvem AWS por @lucsantosdev",
